@@ -54,7 +54,7 @@
 
 h1 {
     color: #ddd;
-    font-family: Prototype;
+    font-family: Ubuntu, Sans;
     filter: drop-shadow(4px 4px 4px black);
     text-shadow: -1px -1px 1px #aaaa,1px 1px 1px #333a;
     padding: 1px 15px;
@@ -63,9 +63,13 @@ h1 {
 
 h2 {
     color: #ddd;
-    font-family: Prototype;
+    font-family: Ubuntu, Sans;
     filter: drop-shadow(4px 4px 4px black);
     text-shadow: -1px -1px 6px #aaa4;
+}
+
+.game-title {
+    text-transform: uppercase;
 }
 
 .tag-count {
@@ -151,9 +155,9 @@ h2 {
 
 .highlighter_box {
     text-shadow:1px 1px 1px #222, -1px -1px 1px #666;
-    padding: 1px 5px;
+    padding: 1px 10px;
     border-radius: 4px;
-    }
+}
 
 .help_tip {
     color: #aaa;
@@ -184,9 +188,21 @@ h2 {
     .player_name_cont {
         display: inline-block;
         vertical-align: middle;
+
+
+
         .player_number {
             margin-right: 5px;
             text-shadow:1px 1px 1px #222, -1px -1px 1px #666;
+        }
+    }
+
+    .player_name_cont.player_is_active {
+        border: 3px solid #fff;
+
+        .player_name, .player_name:hover {
+            cursor: auto;
+            text-decoration: none;
         }
     }
 
