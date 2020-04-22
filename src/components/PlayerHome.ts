@@ -1,4 +1,4 @@
- 
+
 import Vue from "vue";
 
 import { Board } from "./Board";
@@ -69,7 +69,7 @@ export const PlayerHome = Vue.component("player-home", {
                     </form>
                 </dialog>
             </section>
-            
+
             <div v-if="player.phase === 'end'">
                 <div class="player_home_block">
                     <h2 v-i18n>This game is over!</h2>
@@ -200,6 +200,19 @@ export const PlayerHome = Vue.component("player-home", {
                         <board :spaces="player.spaces" :venusNextExtension="player.venusNextExtension" :venusScaleLevel="player.venusScaleLevel" :boardName ="player.boardName"></board>
                     </div>
                 </details>
+
+                <details class="accordion">
+                    <summary class="accordion-header">
+                        <div class="is-action">
+                            <i class="icon icon-arrow-right mr-1"></i>
+                            <span v-i18n>Tips</span>
+                        </div>
+                    </summary>
+                    <div class="accordion-body">
+                        Tips
+                    </div>
+                </details>
+
             </div>
 
             <div v-if="player.colonies.length > 0" class="player_home_block">
